@@ -55,25 +55,9 @@ public class Plataforma {
     }
 
     public void contarCuentasCliente(Cliente cliente) {
-        Ahorro ahorro = new Ahorro();
-        Corriente corriente = new Corriente();
-        int contAhorro = 0;
-        int contCorriente = 0;
-
-        for (int i = 0; i < cliente.getListaCuentas().size(); i++) {
-            if (cliente.getListaCuentas().get(i).equals(ahorro)) {
-                contAhorro++;
-            }
-
-            if (cliente.getListaCuentas().get(i).equals(corriente)) {
-                contCorriente++;
-            }
-        }
-
         System.out.println("EL NUMERO DE CUENTAS QUE AL CLIENTE " + cliente.getNombre() + " " + cliente.getApellidos() + " le pertenecen son:");
-        System.out.println("Número de cuentas de ahorro: " + contAhorro);
-        System.out.println("Número de cuentas corriente: " + contCorriente);
+        System.out.println("Número de cuentas de ahorro: " + cliente.getListaCuentasAhorro().size());
+        System.out.println("Número de cuentas corriente: " + cliente.getListaCuentasCorriente().size());
         System.out.println();
-    }
 
 }
