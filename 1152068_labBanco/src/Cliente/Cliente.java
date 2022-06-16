@@ -13,6 +13,8 @@ public class Cliente {
     private String apellidos;
     private int RUT;
     private ArrayList<Cuenta> listaCuentas = new ArrayList();
+    private ArrayList<Ahorro> listaCuentasAhorro = new ArrayList();
+    private ArrayList<Corriente> listaCuentasCorriente = new ArrayList();
 
     public Cliente() {
     }
@@ -50,9 +52,26 @@ public class Cliente {
     public ArrayList<Cuenta> getListaCuentas() {
         return listaCuentas;
     }
+    
+    public ArrayList<Ahorro> getListaCuentasAhorro() {
+        return listaCuentasAhorro;
+    }
 
+    public ArrayList<Corriente> getListaCuentasCorriente() {
+        return listaCuentasCorriente;
+    }
+
+    
     public void agregarCuenta(Cuenta cuenta) {
         listaCuentas.add(cuenta);
+    }
+
+    public void agregarCuentaAhorro(Ahorro ahorro){
+        listaCuentasAhorro.add(ahorro);
+    }
+    
+    public void agregarCuentaCorriente(Corriente corriente){
+        listaCuentasCorriente.add(corriente);
     }
 
     @Override
