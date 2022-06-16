@@ -25,15 +25,19 @@ public class main {
         Cliente cliente = new Cliente("Gerson", "Diaz", 1152068);
         plataforma.agregarCliente(cliente);
         cliente.agregarCuenta(cuenta1);
+        cliente.agregarCuentaAhorro((Ahorro)cuenta1);
         cliente.agregarCuenta(cuenta2);
+        cliente.agregarCuentaCorriente((Corriente)cuenta2);
 
         Cliente cliente2 = new Cliente("Andres", "Pastrana", 1152069);
         plataforma.agregarCliente(cliente2);
         cliente2.agregarCuenta(cuenta1);
+        cliente2.agregarCuentaAhorro((Ahorro)cuenta1);
 
         Cliente cliente3 = new Cliente("Diego", "Solorzano", 1152070);
         plataforma.agregarCliente(cliente3);
         cliente3.agregarCuenta(cuenta2);
+        cliente3.agregarCuentaCorriente((Corriente)cuenta2);
 
         Scanner sc = new Scanner(System.in);
 
